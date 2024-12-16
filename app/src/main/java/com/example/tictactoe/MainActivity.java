@@ -31,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
     }
     private void onNewGame() {
         board = new String[3][3];
-        for (int row = 0; row < 3; row++)
-            for (int col = 0; col < 3; col++)
-                board[row][col] = new String();
-
+        for (int row = 0; row < 3; row++) {
+            for (int col = 0; col < 3; col++) {
+                board[row][col] = "";
+            }
+        }
         turn = "X";
         count = 0;
     }
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean isWinner() {
-        private boolean isWinner() {
+         {
             for (int row = 0; row < 3; row++) {
                 if (board[row][0].equals(board[row][1]) && board[row][1].equals(board[row][2]) && !board[row][0].equals(""))
                     return true;
@@ -127,4 +128,3 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-}
